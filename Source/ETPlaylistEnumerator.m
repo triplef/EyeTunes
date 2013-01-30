@@ -76,7 +76,7 @@
 
 - (NSArray *)allObjects
 {
-	NSMutableArray *objects = [NSMutableArray arrayWithCapacity:(count - seq)];
+	NSMutableArray *objects = [NSMutableArray arrayWithCapacity:ABS(count - seq)];	// use ABS() as safety (negative values cause exception)
 	ETPlaylist *playlist = nil;
 	while (playlist = [self nextObject]) {
 		[objects addObject:playlist];
