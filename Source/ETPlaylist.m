@@ -51,11 +51,11 @@ static const BOOL doLog = NO;
 
 - (id) initWithDescriptor:(AEDesc *)desc
 {
-	if (![super initWithDescriptor:desc applCode:ET_APPLE_EVENT_OBJECT_DEFAULT_APPL])
-		return nil;
-	
-	parentPlaylistId = -1;
-	persistentId = -1;
+	self = [super initWithDescriptor:desc applCode:ET_APPLE_EVENT_OBJECT_DEFAULT_APPL];
+	if (self) {
+		parentPlaylistId = -1;
+		persistentId = -1;
+	}
 	return self;
 }
 

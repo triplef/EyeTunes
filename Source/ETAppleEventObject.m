@@ -68,6 +68,7 @@
 
 - (id) initWithDescriptor:(AEDesc *)aDesc applCode:(OSType)applCode
 {
+	self = [super init];
 	if (self) {
 		refDescriptor = malloc(sizeof(AEDesc));
 		memcpy(refDescriptor, aDesc, sizeof(AEDesc));

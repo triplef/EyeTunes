@@ -29,12 +29,11 @@
 
 - (id) init
 {
-	if (![super init])
-		return nil;
-	
-	playlists = [[NSMutableDictionary alloc] init];
-	userPlaylists = [[NSMutableDictionary alloc] init];
-	
+	self = [super init];
+	if (self) {
+		playlists = [[NSMutableDictionary alloc] init];
+		userPlaylists = [[NSMutableDictionary alloc] init];
+	}
 	return self;
 }
 
